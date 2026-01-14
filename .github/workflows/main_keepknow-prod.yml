@@ -29,7 +29,8 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           app_location: "/"
-          output_location: "dist/my-app"
+          # Angular (builder: application) outputs the static site to dist/<app>/browser
+          output_location: "dist/my-app/browser"
           # api_location: ""  # ไม่มี API ก็ปล่อยว่าง
 
   close_pull_request:
